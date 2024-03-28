@@ -8,10 +8,10 @@ from scipy.spatial.distance import cdist
 
 def computeHistogram(img_file, F, textons):
     # Read the image
-    img = io.imread(img_file)
+    image = io.imread(img_file)
     
     # Convert the image to grayscale
-    img_gray = rgb2gray(img)
+    img_gray = rgb2gray(image)
     
     # Apply filter bank to the grayscale image
     filter_responses = np.zeros((img_gray.shape[0], img_gray.shape[1], F.shape[2]))
